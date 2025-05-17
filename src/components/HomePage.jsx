@@ -95,7 +95,7 @@ function HomePage() {
         <p className="footer-contact">
           Contact us:{" "}
           <a href="mailto:support@handmademarketplace.com">
-            support@handmademarketplace.com
+            jitankasarkar2017@gmail.com
           </a>
         </p>
       </footer>
