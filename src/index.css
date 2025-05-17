@@ -667,6 +667,10 @@ body {
   .welcome-subtitle {
     font-size: 14px;
   }
+    .welcome-section {
+    height: 100vh;
+  } 
+
 
   .about-cards,
   .reviews-cards,
