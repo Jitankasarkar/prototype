@@ -7,7 +7,7 @@ function NavBar({ user, currentPage, onLoginClick, onHomeClick, onLogout, onRese
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <h1 className="logo" onClick={onHomeClick}>MyApp</h1>
+        <h1 className="logo" onClick={onHomeClick}>IEMBaba</h1>
       </div>
 
       <div className="navbar-right">
