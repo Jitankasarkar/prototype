@@ -615,7 +615,7 @@ body {
   } */
 
   .welcome-section {
-    height: 80vh;
+    height: 100vh;
   }
 
   .welcome-title {
@@ -643,11 +643,11 @@ body {
   .login-container{
     width: 100%;
   }
-  .login-container,
+  /* .login-container,
   .add-item-container {
     
-    /* margin: 40px 16px; */
-  }
+     margin: 40px 16px; 
+  } */
 
   .navbar-title {
     font-size: 28px;
