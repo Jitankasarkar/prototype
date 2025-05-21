@@ -1,20 +1,34 @@
+import Banner from "../assets/Banner.mp4";
+
 function HomePage() {
   return (
     <div className="home-container">
       {/* Welcome Banner */}
-      
-        <section className="welcome-section">
-          <div className="welcome-content">
-            <h1 className="welcome-title">
-              Welcome to IEMBaba, a marketplace where you will
-            </h1>
-            <p className="welcome-subtitle">
-              Discover unique, handcrafted goods from artisans around the world.
-            </p>
-            <button className="welcome-button">Start Shopping</button>
-          </div>
-        </section>
-      
+
+      <section className="welcome-section">
+        <div className="video-overlay">
+          <video
+            className="welcome-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+            src={Banner}
+            type="video/mp4"
+          />
+          <div className="dark-overlay" />
+        </div>
+
+        <div className="welcome-content">
+          <h3 className="welcome-title">
+            Welcome to IEMBaba, a marketplace where you will
+          </h3>
+          <p className="welcome-subtitle">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto maxime consequuntur consectetur quas dolorem assumenda similique eos. Error tempora consectetur dolorum libero saepe nemo. Eveniet nobis cumque dicta, explicabo maxime repudiandae nostrum? Sit saepe accusamus optio ad aperiam, illo voluptatibus maxime omnis. Atque labore porro cumque necessitatibus perferendis repellendus fugiat.
+          </p>
+          <button className="welcome-button">Start Shopping</button>
+        </div>
+      </section>
 
       {/* About Section */}
       <section className="about-section">

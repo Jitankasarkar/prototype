@@ -5,19 +5,16 @@ import LoginPage from './components/LoginPage';
 import SellerDashboard from './components/SellerDashboard';
 import BuyerDashboard from './components/BuyerDashboard';
 
-// Mock initial products
 const initialProducts = [
-  { id: 1, name: 'Handmade Candle', description: 'Scented lavender candle', price: 15.99, image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c' },
-  { id: 2, name: 'Wooden Coaster', description: 'Set of 4 carved coasters', price: 12.50, image: 'https://images.unsplash.com/photo-1590283603385-4e1d1b2f8c07' },
+  { id: 1, name: 'Handmade Candle', description: 'Scented lavender candle', price: 15.99, image: 'https://img3.exportersindia.com/product_images/bc-full/2021/8/9073197/handmade-candles-1629520543-5951257.jpeg' },
+  { id: 2, name: 'Tote Bags', description: 'Set of 4 carved bags', price: 12.50, image: 'https://i.pinimg.com/originals/09/8d/93/098d936e5803e7763a3d1c1be2bdcf6f.jpg' },
 ];
 
 function App() {
-  const [user, setUser] = useState(null); // { type: "seller" | "buyer", name: string }
-  const [products, setProducts] = useState(() => {
-    const saved = localStorage.getItem('products');
-    return saved ? JSON.parse(saved) : initialProducts;
-  });
-  const [currentPage, setCurrentPage] = useState('home'); // 'home', 'login', 'seller', 'buyer'
+  const [user, setUser] = useState(null); 
+  const [products, setProducts] = useState(initialProducts);
+
+  const [currentPage, setCurrentPage] = useState('home'); 
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
