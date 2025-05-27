@@ -1,4 +1,4 @@
-import Banner from "../assets/Banner.mp4";
+import Banner_1 from "../assets/Banner_1.mp4";
 
 function HomePage() {
   return (
@@ -13,7 +13,7 @@ function HomePage() {
             loop
             muted
             playsInline
-            src={Banner}
+            src={Banner_1}
             type="video/mp4"
           />
           <div className="dark-overlay" />
@@ -21,42 +21,57 @@ function HomePage() {
 
         <div className="welcome-content">
           <h3 className="welcome-title">
-            Welcome to IEMBaba, a marketplace where you will
+            Welcome to IEMBaba, a marketplace where
           </h3>
           <p className="welcome-subtitle">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto maxime consequuntur consectetur quas dolorem assumenda similique eos. Error tempora consectetur dolorum libero saepe nemo. Eveniet nobis cumque dicta, explicabo maxime repudiandae nostrum? Sit saepe accusamus optio ad aperiam, illo voluptatibus maxime omnis. Atque labore porro cumque necessitatibus perferendis repellendus fugiat.
+             Artisans meet admirers and creativity finds home. Here, every product tells a story, handcrafted with passion and purpose by skilled creators. At IEMBaba, you're not just shopping — you're supporting dreams, culture, and craftsmanship.
           </p>
           <button className="welcome-button">Start Shopping</button>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="about-section">
-        <h2 className="section-title">About the Marketplace</h2>
-        <div className="about-cards">
-          <div className="about-card">
-            <h3 className="card-title">Curated Handmade Goods</h3>
-            <p className="card-description">
-              Explore a diverse collection of high-quality, handcrafted items
-              made with love and care by skilled artisans.
-            </p>
-          </div>
-          <div className="about-card">
-            <h3 className="card-title">Support Artisans</h3>
-            <p className="card-description">
-              Connect directly with creators, empowering small businesses and
-              preserving traditional craftsmanship.
-            </p>
-          </div>
-          <div className="about-card">
-            <h3 className="card-title">Seamless Experience</h3>
-            <p className="card-description">
-              Enjoy a user-friendly platform for buying and selling, with secure
-              transactions and global reach.
-            </p>
-          </div>
+<section className="about-section">
+  <div className="about-container">
+    {/* Left (fixed) */}
+    <div className="parent-about-left">
+    <div className="about-left">
+      <h2 className="section-title">About the Marketplace</h2>
+      <p className="about-subtitle">
+        Discover the heart of handmade. <br />
+        Support creativity. <br />
+        Empower artisans. <br />
+        Celebrate uniqueness.
+      </p>
+    </div>
+    </div>
+
+    {/* Right (scrollable cards) */}
+    <div className="about-right">
+      <div className="about-cards-scroll">
+        <div className="about-card"> 
+          <h3 className="card-title">Curated Handmade Goods</h3>
+          <p className="card-description">
+            Explore a diverse collection of high-quality, handcrafted items made with love and care by skilled artisans.
+          </p>
         </div>
-      </section>
+        <div className="about-card">
+          <h3 className="card-title">Support Artisans</h3>
+          <p className="card-description">
+            Connect directly with creators, empowering small businesses and preserving traditional craftsmanship.
+          </p>
+        </div>
+        <div className="about-card">
+          <h3 className="card-title">Seamless Experience</h3>
+          <p className="card-description">
+            Enjoy a user-friendly platform for buying and selling, with secure transactions and global reach.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Reviews Section */}
       <section className="reviews-section">
