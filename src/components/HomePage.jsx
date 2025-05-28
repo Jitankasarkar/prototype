@@ -24,12 +24,18 @@ function HomePage() {
 
         <div className="welcome-content">
           <h3 className="welcome-title">
-            Welcome to IEMBaba, a marketplace where
+            Welcome to Karigari, a marketplace where
           </h3>
           <p className="welcome-subtitle">
-             Artisans meet admirers and creativity finds home. Here, every product tells a story, handcrafted with passion and purpose by skilled creators. At IEMBaba, you're not just shopping — you're supporting dreams, culture, and craftsmanship.
+             Artisans meet admirers and creativity finds home. Here, every product tells a story, handcrafted with passion and purpose by skilled creators. At Karigari, you're not just shopping — you're supporting dreams, culture, and craftsmanship.
           </p>
           <button className="welcome-button">Start Shopping</button>
+          <div className="welcome-icons">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+          </div>
         </div>
       </section>
 
@@ -41,10 +47,9 @@ function HomePage() {
     <div className="about-left">
       <h2 className="section-title">About the Marketplace</h2>
       <p className="about-subtitle">
-        Discover the heart of handmade. <br />
-        Support creativity. <br />
-        Empower artisans. <br />
-        Celebrate uniqueness.
+        Our marketplace is a celebration of traditional craftsmanship and local talent.
+We connect skilled artisans with conscious buyers seeking unique, handmade treasures.
+Each product tells a story — rooted in culture, made with heart.
       </p>
       <button className="about-btn">About</button>
     </div>

@@ -235,6 +235,66 @@ body {
   bottom: 25px;
  
 }
+/* i{
+  height: 30px;
+  width: px;
+} */
+ /* .welcome-section a{ */
+  /* height: 23px; */
+  /* width: 23px;  */
+  /* font-size: 1.5rem; */
+  /* gap: 10px; */
+  /* gap: 5px;
+  filter: invert();
+  
+  /* top: 10px; */
+ /* } */
+ .welcome-icons .fa-brands{
+  /* color: #ffffff; */
+  height: 23px;
+  width: 23px; 
+  gap: 10px;
+  font-size: 1.6rem;
+   color: rgba(255, 255, 255, 0.605);
+   /* transition:  0.3s ease; */
+  
+ }
+ .welcome-icons .fa-solid{
+   /* color: #ffffff; */
+  height: 23px;
+  width: 23px; 
+   font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.605);
+  /* transition:  0.2s ease-out; */
+ }
+ .welcome-icons {
+  /* font-size: 1rem; */
+  display: flex;
+  position: relative;
+  /* width: 28%; */
+  /* justify-content: flex-end; */
+  /* flex-direction: column; */
+  top: 25px;
+  gap: 28px;
+ 
+  
+  
+}
+.welcome-icons .fa-brands:hover{
+   background: #00ffff;
+  /* color: #000; */
+  transform: scale(1.4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.welcome-icons .fa-solid:hover{
+   background: #00ffff;
+  /* color: #000; */
+  transform: scale(1.4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 .dark-overlay {
   position: absolute;
@@ -286,6 +346,7 @@ body {
 
 /* About Section */
 .about-section {
+
   /* border: 5px solid green; */
   display: flex;
   height: 70vh;
@@ -300,7 +361,7 @@ body {
   height: 100%;
   width: 100%;
   background-image: url('https://images.pexels.com/photos/6170458/pexels-photo-6170458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-  opacity: 0.8;
+  opacity: 0.9;
   background-size: cover;         /* Cover the entire div */
   background-position: center;    /* Center the image */
   background-repeat: no-repeat;   /* Prevent tiling */
@@ -328,7 +389,11 @@ body {
   font-size: 1.1rem;
   margin-top: 1rem;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 500;
+  position: relative;
+  width: 64%;
+  left: 133px;
+  bottom: 5px;
 }
 
 .section-title{
@@ -772,6 +837,12 @@ background-color: #224172;
     padding: 12px 24px;
     font-size: 16px;
   }
+  .welcome-icons .fa-brands{
+    font-size: 1.2rem;
+  }
+  .welcome-icons .fa-solid{
+    font-size: 1.2rem;
+  }
 
   .section-title {
     font-size: 28px;
@@ -864,11 +935,26 @@ background-color: #224172;
   background: transparent;
   backdrop-filter: blur(5px);
  }
+  .welcome-icons .fa-brands{
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.605);
+  }
+  .welcome-icons .fa-solid{
+    font-size: 1.3rem;
+     color: rgba(255, 255, 255, 0.605);
+  }
+  .welcome-icons{
+    display: flex;
+    justify-content: center;
+    /* top: 10px; */
+    gap: 10px;
+  }
 
  .section-title {
     font-size: 24px;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 40px;
+    /* padding-top: 20px; */
     z-index: 2;
     color: white;
     /* right: 2px; */
@@ -905,6 +991,7 @@ z-index: 2;
     z-index: 2;
     background: transparent;
     backdrop-filter: blur(15px);
+    margin-top: 0;
 
   }
  .about-section{
