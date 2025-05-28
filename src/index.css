@@ -21,9 +21,9 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #222;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   color: white;
-  position: relative;
+  position: fixed
 }
 
 .logo {
@@ -289,7 +289,7 @@ body {
   /* border: 5px solid green; */
   display: flex;
   height: 70vh;
-  padding: 2rem;
+  /* padding: 2rem; */
   gap: 3rem;
   background-color: #ffffff;
   overflow: hidden;
@@ -302,7 +302,7 @@ body {
 }
 .parent-about-left{
   display: flex;
-  width: 40%;
+  width: 50%;
   /* border: 2px solid red; */
 }
 
@@ -322,18 +322,23 @@ body {
 .about-subtitle {
   font-size: 1.1rem;
   margin-top: 1rem;
-  color: #000000;
+  color: #ffffff;
+  font-weight: 400;
 }
 
-
+.section-title{
+  color: white;
+  font-weight: 800;
+  font-size: 30px;
+}
 .about-right {
-  flex: 2;
+  flex: 1;
   height: 65vh; /* ← Reduce height */
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  padding-right: 1rem;
-  border-left: 2px solid #ddd;
+  /* padding-right: 1rem; */
+  /* border-left: 2px solid #ddd; */
 }
 
 .about-cards-scroll {
@@ -355,6 +360,7 @@ body {
   background-color: rgba(189, 187, 187, 0.481);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(3, 2, 2, 0.1);
+  margin-top: 10px;
 }
 
 .about-card:hover {
@@ -366,19 +372,52 @@ body {
 .card-title{
   text-align: center;
 }
+.about-btn{
+background-color: #224172;
+  color: #fff;
+  border: none;
+  position: relative;
+  top: 10px;
+  padding: 11px 23px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.about-btn:hover{
+  background: #00ffff;
+  color: #000;
+  transform: translateY(-3px);
+}
+.parent-about-left {
+  background-image: url('https://images.pexels.com/photos/6170458/pexels-photo-6170458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  opacity: 0.7;
+  background-size: cover;         /* Cover the entire div */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* Prevent tiling */
+}
 
 /* Reviews Section */
 .reviews-section {
-  padding: 80px 0;
-  background: linear-gradient(180deg, #f0f4f8, #e2e8f0);
+  padding: 60px 0;
+  background-color: rgb(224, 223, 223);
   margin: 0 auto;
   padding: 32px;
 }
+ .review-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+  }
 
 .reviews-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .review-card {
@@ -709,9 +748,49 @@ body {
 
   .section-title {
     font-size: 28px;
+    justify-content: center;
+    color: #000;
+  }
+  .about-container{
+    display: inline-block;
+  }
+  .about-subtitle{
+    display: none;
+    color: #000;
+  }
+ .about-btn{
+  display: none;
+ }
+  .parent-about-left{
+    
+    /* display: flex; */
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1rem;
+    position: relative;
+    left: 12.5rem;
+  }
+  .parent-about-left {
+  background-image: url('');
+  opacity: 0.9;
+  background-size: cover;         /* Cover the entire div */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* Prevent tiling */
+}
+  .about-card{
+    height: 50vh;
+    gap: none;
+  }
+  .about-section{
+    height: 70vh;
   }
 
-  .about-section,
+  .review-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
   .reviews-section {
     padding: 60px 0;
   }
@@ -735,7 +814,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .welcome-title {
     font-size: 28px;
   }
@@ -759,31 +838,65 @@ body {
   backdrop-filter: blur(5px);
  }
 
- .about-section {
-    display: block;
-    height: auto;
-    padding: 1rem;
+ .section-title {
+    font-size: 24px;
+    justify-content: center;
+    margin-top: 30px;
+    z-index: 2;
+    color: white;
+    /* right: 2px; */
   }
+  .about-container{
+    display: inline-block;
+    /* height: 100%; */
+    background-image: url('https://images.pexels.com/photos/6170458/pexels-photo-6170458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  opacity: 0.9;
+  background-size: cover;         /* Cover the entire div */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* Prevent tiling */
+z-index: 2;
+  }
+  .about-subtitle{
+    display: none;
+  }
+ 
+  .parent-about-left{
+    /* display: flex; */
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1rem;
+    position: relative;
+    left: 0rem;
+    width: 100%;
+    font-size: small;
+    right: 2px;
+  }
+  .about-card{
+    height: 60vh;
+    gap: none;
+    z-index: 2;
+    background: transparent;
+    backdrop-filter: blur(15px);
+  }
+ .about-section{
+  height: fit-content;
+  padding: 0;
+  /* padding-top: 2rem; */
+  /* padding-left: 0.5rem; */
+ }
+  .about-btn{
+  display: none;
+ }
+ .card-title{
+  color: white;
 
-  .about-left {
-    position: static;
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
+ }
+ .card-description{
+  color: white;
+ }
 
-  .about-right {
-    height: auto;
-    overflow: visible;
-    scroll-snap-type: none;
-    border-left: none;
-    padding-right: 0;
-  }
 
-  .about-card {
-    min-height: auto;
-    scroll-snap-align: none;
-    margin-bottom: 1.5rem;
-  }
   .reviews-cards,
   .items-grid {
     grid-template-columns: 1fr;
@@ -803,4 +916,7 @@ body {
   .footer-contact {
     font-size: 14px;
   }
+}
+.reviews-section{
+  padding: 40px 0;
 }

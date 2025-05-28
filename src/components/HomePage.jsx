@@ -43,6 +43,7 @@ function HomePage() {
         Empower artisans. <br />
         Celebrate uniqueness.
       </p>
+      <button className="about-btn">About</button>
     </div>
     </div>
 
@@ -50,6 +51,7 @@ function HomePage() {
     <div className="about-right">
       <div className="about-cards-scroll">
         <div className="about-card"> 
+          
           <h3 className="card-title">Curated Handmade Goods</h3>
           <p className="card-description">
             Explore a diverse collection of high-quality, handcrafted items made with love and care by skilled artisans.
@@ -75,7 +77,7 @@ function HomePage() {
 
       {/* Reviews Section */}
       <section className="reviews-section">
-        <h2 className="section-title">What Our Users Say</h2>
+        <h2 className="review-title">What Our Users Say</h2>
         <div className="reviews-cards">
           <div className="review-card">
             <img
