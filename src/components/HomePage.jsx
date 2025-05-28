@@ -1,4 +1,7 @@
 import Banner_1 from "../assets/Banner_1.mp4";
+import icon_1 from "../assets/icon_1.png";
+import icon_2 from "../assets/icon_2.png";
+import icon_3 from "../assets/icon_3.png";
 
 function HomePage() {
   return (
@@ -51,19 +54,21 @@ function HomePage() {
     <div className="about-right">
       <div className="about-cards-scroll">
         <div className="about-card"> 
-          
+          <div className="about-icons"><img src={icon_1} alt="" /></div>
           <h3 className="card-title">Curated Handmade Goods</h3>
           <p className="card-description">
             Explore a diverse collection of high-quality, handcrafted items made with love and care by skilled artisans.
           </p>
         </div>
         <div className="about-card">
+          <div className="about-icons"><img src={icon_2} alt="" /></div>
           <h3 className="card-title">Support Artisans</h3>
           <p className="card-description">
             Connect directly with creators, empowering small businesses and preserving traditional craftsmanship.
           </p>
         </div>
         <div className="about-card">
+                    <div className="about-icons"><img src={icon_3} alt="" /></div>
           <h3 className="card-title">Seamless Experience</h3>
           <p className="card-description">
             Enjoy a user-friendly platform for buying and selling, with secure transactions and global reach.
