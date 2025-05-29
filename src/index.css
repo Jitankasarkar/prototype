@@ -318,6 +318,9 @@ body {
   margin-bottom: 32px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
+.welcome-subtitle-2{
+  display: none;
+}
 
 .welcome-button {
   background-color: #224172;
@@ -912,14 +915,29 @@ background-color: #224172;
   }
 }
 
+
+
+
 @media (max-width: 500px) {
+   
   .welcome-title {
     font-size: 28px;
+    margin-bottom: 18px;
   }
 
   .welcome-subtitle {
-    font-size: 17px;
+    display: none;
   }
+  .welcome-subtitle-2{
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .welcome-button{
+    font-size: 14px;
+    padding: 12px 12px;  
+}
+
     /* .welcome-section {
     height: 100vh;
   }  */
@@ -936,22 +954,23 @@ background-color: #224172;
   backdrop-filter: blur(5px);
  }
   .welcome-icons .fa-brands{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.605);
   }
   .welcome-icons .fa-solid{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
      color: rgba(255, 255, 255, 0.605);
   }
   .welcome-icons{
     display: flex;
     justify-content: center;
     /* top: 10px; */
-    gap: 10px;
+    gap: 5px;
   }
+ 
 
  .section-title {
-    font-size: 24px;
+    font-size: 22px;
     justify-content: center;
     margin-top: 40px;
     /* padding-top: 20px; */
@@ -1005,10 +1024,13 @@ z-index: 2;
  }
  .card-title{
   color: white;
+  font-size: 18px;
+  
 
  }
  .card-description{
   color: white;
+  font-size: 14px;
  }
  .about-card img{
   /* right: 2rem; */

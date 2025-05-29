@@ -26,6 +26,8 @@ function HomePage() {
           <h3 className="welcome-title">
             Welcome to Karigari, a marketplace where
           </h3>
+          <p className="welcome-subtitle-2">
+             Artisans meet admirers and creativity finds home.</p>
           <p className="welcome-subtitle">
              Artisans meet admirers and creativity finds home. Here, every product tells a story, handcrafted with passion and purpose by skilled creators. At Karigari, you're not just shopping — you're supporting dreams, culture, and craftsmanship.
           </p>
@@ -33,8 +35,8 @@ function HomePage() {
           <div className="welcome-icons">
             <a href=""><i class="fa-brands fa-instagram"></i></a>
             <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
-            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.twitter.com/"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="https://mail.google.com/"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
       </section>
