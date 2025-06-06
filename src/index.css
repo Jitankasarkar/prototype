@@ -35,6 +35,25 @@ body {
 .logo:hover {
   color: #00d9ff;
 }
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logout-button {
+  padding: 8px 12px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 /* Menu Icon */
 .menu-icon {
@@ -233,7 +252,8 @@ body {
   text-align: left;
   color: white;
   bottom: 25px;
- 
+  background: transparent;
+  backdrop-filter: blur(5px);
 }
 /* i{
   height: 30px;
@@ -251,9 +271,9 @@ body {
  /* } */
  .welcome-icons .fa-brands{
   /* color: #ffffff; */
-  height: 23px;
-  width: 23px; 
-  gap: 10px;
+  height: 20px;
+  width: 20px; 
+  /* gap: 15px; */
   font-size: 1.6rem;
    color: rgba(255, 255, 255, 0.605);
    /* transition:  0.3s ease; */
@@ -261,8 +281,8 @@ body {
  }
  .welcome-icons .fa-solid{
    /* color: #ffffff; */
-  height: 23px;
-  width: 23px; 
+  height: 20px;
+  width: 20px; 
    font-size: 1.6rem;
     color: rgba(255, 255, 255, 0.605);
   /* transition:  0.2s ease-out; */
@@ -275,7 +295,7 @@ body {
   /* justify-content: flex-end; */
   /* flex-direction: column; */
   top: 25px;
-  gap: 28px;
+  gap: 33px;
  
   
   
@@ -581,84 +601,99 @@ background-color: #224172;
 
 /* LoginPage Styles */
 .login-container {
-  width: 100%;
+  /* display: inline-block; */
   max-width: 400px;
-  margin: 80px auto;
-  background-color: #fff;
-  padding: 24px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(150deg, #14152821, #144974c7, #1415281d);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  /* transition: color 0.3s ease; */
 }
 
-.login-container:hover {
-  transform: translateY(-2px);
-}
+
 
 .login-title {
-  font-size: 26px;
-  font-weight: 600;
   text-align: center;
-  margin-bottom: 24px;
-  color: #1e40af;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
 }
-
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .form-label {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 6px;
-  color: #4b5563;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #444;
 }
 
 .form-input,
 .form-select {
-  padding: 10px;
-  border: 1px solid #d1d5db;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
   border-radius: 8px;
+  outline: none;
   font-size: 15px;
-  background-color: #f9fafb;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s ease-in-out;
 }
-
 .form-input:focus,
 .form-select:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
+.form-button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.form-button:hover {
+  background-color: #0056b3;
+}
+.form-link {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+.form-toggle {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.form-toggle button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
 
 .form-error {
-  color: #ef4444;
+  color: red;
   font-size: 13px;
-  margin-top: 6px;
-}
-
-.form-button {
-  background-color: #3b82f6;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.form-button:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
+  margin-top: 5px;
 }
 
 /* SellerDashboard Styles */
@@ -1063,3 +1098,52 @@ z-index: 2;
 .reviews-section{
   padding: 40px 0;
 }
+.login-container{
+    max-width: 380px;
+    /* display: block; */
+  }
+
+.login-title{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.form-group{
+  margin-bottom: 12px;
+}
+.form-label{
+  font-weight: 500;
+  margin-bottom: 3px;
+  
+  font-size: 15px;
+  font-weight: 700;
+}
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 7px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+.form-button {
+  
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.form-error {
+  color: rgb(255, 3, 3);
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 600;
+} 
+
+

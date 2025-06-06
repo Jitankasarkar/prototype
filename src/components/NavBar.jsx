@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../index.css"; // adjust if needed
 
 function NavBar({ user, currentPage, onLoginClick, onHomeClick, onLogout, onReset }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,11 +18,23 @@ function NavBar({ user, currentPage, onLoginClick, onHomeClick, onLogout, onRese
         </button>
 
         <div className={`nav-buttons ${isMenuOpen ? "open" : ""}`}>
-          {!user && <button className="login-button" onClick={onLoginClick}>Login</button>}
+          {!user && (
+            <button className="login-button" onClick={onLoginClick}>
+              Login
+            </button>
+          )}
+
           {user && (
             <>
               <button onClick={onHomeClick}>Home</button>
               <button onClick={onReset}>Reset</button>
+              {user.photoURL && (
+                <img
+                  src={user.photoURL}
+                  alt="Profile"
+                  className="profile-picture"
+                />
+              )}
               <button onClick={onLogout}>Logout</button>
             </>
           )}

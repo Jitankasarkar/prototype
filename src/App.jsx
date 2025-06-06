@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { auth, provider } from './firebase';
+import { signInWithPopup, signOut } from 'firebase/auth';
+
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import LoginPage from './components/LoginPage';
@@ -13,7 +16,6 @@ const initialProducts = [
 function App() {
   const [user, setUser] = useState(null); 
   const [products, setProducts] = useState(initialProducts);
-
   const [currentPage, setCurrentPage] = useState('home'); 
 
   useEffect(() => {
@@ -36,10 +38,36 @@ function App() {
     localStorage.setItem('user', JSON.stringify(newUser));
   };
 
-  const handleLogout = () => {
-    setUser(null);
-    setCurrentPage('home');
-    localStorage.removeItem('user');
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const loggedInUser = result.user;
+      const newUser = {
+        type: 'buyer', // default or later let them choose
+        name: loggedInUser.displayName,
+        email: loggedInUser.email,
+        photoURL: loggedInUser.photoURL,
+        google: true
+      };
+      setUser(newUser);
+      setCurrentPage('buyer');
+      localStorage.setItem('user', JSON.stringify(newUser));
+    } catch (error) {
+      console.error("Google login failed", error);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      if (user?.google) {
+        await signOut(auth);
+      }
+      setUser(null);
+      setCurrentPage('home');
+      localStorage.removeItem('user');
+    } catch (error) {
+      console.error("Logout failed", error);
+    }
   };
 
   const handleReset = () => {
@@ -60,13 +88,14 @@ function App() {
         user={user}
         currentPage={currentPage}
         onLoginClick={() => setCurrentPage('login')}
+        onGoogleLogin={handleGoogleLogin}
         onHomeClick={() => setCurrentPage('home')}
         onLogout={handleLogout}
         onReset={handleReset}
       />
       <div className="container">
         {currentPage === 'home' && <HomePage />}
-        {currentPage === 'login' && <LoginPage onLogin={handleLogin} />}
+        {currentPage === 'login' && <LoginPage onLogin={handleLogin} onGoogleLogin={handleGoogleLogin} />}
         {currentPage === 'seller' && <SellerDashboard products={products} addProduct={addProduct} />}
         {currentPage === 'buyer' && <BuyerDashboard products={products} />}
       </div>
